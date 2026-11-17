@@ -1,0 +1,15 @@
+.git
+.venv
+venv
+.pytest_cache
+.mypy_cache
+.ruff_cache
+.env
+**/.env
+**/__pycache__
+**/*.pyc
+*.pfx
+*.p12
+*.pem
+tokens.json
+pgdata

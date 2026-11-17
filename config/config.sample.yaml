@@ -1,0 +1,31 @@
+# Sample configuration. Placeholders only.
+# Secret VALUES do not belong in this file — only references (env names, file paths, OCIDs).
+# Environment variables override these keys. Select the file with CONFIG_FILE.
+
+database_url: "postgresql+asyncpg://USER:PASSWORD@localhost:5432/erp"
+redis_url: "redis://localhost:6379/0"
+
+# Default true: stock sync logs the marketplace PUT and does not call the channel.
+shadow_mode: true
+
+# local | oci_vault
+# local is for development and resolves only env: and file: references.
+# oci_vault is a fail-closed stub until OCI infrastructure is wired.
+secrets_provider: "local"
+
+ops_bearer_token_ref: "env:OPS_BEARER_TOKEN"
+webhook_hmac_secret_ref: "env:WEBHOOK_HMAC_SECRET"
+webhook_url: ""
+
+log_level: "INFO"
+
+# Stored on company rows as references. Example shapes only — not real OCIDs.
+# a1_certificate_secret_ref: "ocid1.vaultsecret.oc1.sa-saopaulo-1.REPLACE_ME"
+# cert_password_secret_ref: "ocid1.vaultsecret.oc1.sa-saopaulo-1.REPLACE_ME"
+# company_channel_secrets.client_secret_ref: "ocid1.vaultsecret.oc1.sa-saopaulo-1.REPLACE_ME"
+# company_channel_secrets.refresh_token_ref: "ocid1.vaultsecret.oc1.sa-saopaulo-1.REPLACE_ME"
+
+oci:
+  region: "sa-saopaulo-1"
+  vault_id: "ocid1.vault.oc1.sa-saopaulo-1.REPLACE_ME"
+  compartment_id: "ocid1.compartment.oc1..REPLACE_ME"

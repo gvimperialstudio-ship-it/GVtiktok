@@ -1,0 +1,28 @@
+# Local secrets and credentials. Never commit these.
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.pem
+tokens.json
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+dist/
+build/
+
+# Local runtime
+*.log
+pgdata/
+.idea/
+.vscode/
